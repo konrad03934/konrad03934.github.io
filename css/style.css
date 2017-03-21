@@ -49,90 +49,231 @@ table {
 
 body {
 	width: 100%;
-	font-family: "Oranibaum", "Arial" sans-serif;
+	font-family: "Lato", san-serif;
+	background-color: #e0e0e0;
 }
 
-header {
-	height: 200px;
-	background: url("../images/background-photo.jpg") center center no-repeat ;
-	background-size: 100%;
+nav {
+	position: fixed;
+	width: 100%;
+	}
+
+#main-nav {
+	text-align: right;
 }
 
-header h1 {
-	font-size: 3em;
-	color: rgba(255, 244, 244, 0.91);
-	font-weight: 600;
+nav ul li {
+	display: inline-block;
+	font-weight: 300;
+	padding: 3px 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+	color: #6d6969;
+	text-shadow: 1px 1px #934c4c;
+}
+
+/*style dla header*/
+#main-header {
+	background: url("../images/header-background.jpg") center no-repeat;
+	background-size: cover;
 	text-align: center;
+}
+/*nie trzeba position bo elementy maja pading więc automatycznie będą na środku*/
+.main-header-content {
+	padding: 30vh;
+	font-family: "Roboto", sans-serif;
+}
+
+.main-header-content h1 {
+	color: #fff;
+	font-size: 5em;	
+}
+
+header h2 {
+	font-size: 2.5em;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.green {
+	color: #53a800;
+}
+/*style dla section*/
+section {
+	background-color: #ffffff;
+	width: 100%;
+	text-align: center;
+}
+
+#about {
+	padding: 5% 0;
+	display: inline-block;
+	
+}
+
+section h2 {
+	font-size: 1.6em;
+	padding: 20px 0;
+	font-weight: 600;
+}
+
+.foto {
+	width: 30%;
+	max-height: 350px;
+	box-sizing: border-box;
+	padding: 5%;
+	float: left;
+	
+}
+
+article {
+	width: 70%;
+	text-align: left;
+	box-sizing: border-box;
+	padding: 1% 5%;
+	float: right;
+	
+}
+
+article:after, .foto:after {
+	clear: both;
+}
+
+#skills {
+	margin-top: 1%;
+}
+
+#icons {
+	margin-top: 20px;
+	
+}
+
+#icons figure {
+	width: 5%;
+	padding: 15px;
+	display: inline-block;
+}
+
+#portfolio {
+	padding-top: 80px;
+}
+
+#gallery {
+	width: 90%;
+	height: 300px;
+	margin: 0 5%;
+	font-size: 0;
+	padding-bottom: 5%;
+}
+
+#gallery .item-1 {
+	width: 33.333%;
+	height: 100%;
+	background: url("../images/formularz.png")  no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	border: 1px solid rgba(44, 44, 255, 0.44);
+	display: inline-block;
 	position: relative;
-	top: 30%;
 }
 
-/*style dla danych kontaktowych*/
+.item-1 #item-content-1 {
 
-form  {
-	margin: 20px;
+	width: 88%;
+	height: 88%;	
+	margin: 5%;
+	box-sizing: border-box;
+	border: 2px solid #c3c3c3;
+	position: absolute;
+	opacity: 0;	
+	padding-top: 20%;
+	color: #363636;
+	font-size: 25px;
+	text-align: center;
+}
+
+.item-1 #item-content-1:hover {
+	opacity: 1;
+	background-color: rgba(255, 255, 255, 0.4);	
+	transition: all 0.8s ease-in-out; 
 }
 
 
-label, input {
-	margin: 5px 0;
+#gallery .item-2 {
+	width: 33.333%;
+	height: 100%;
+	box-sizing: border-box;
+	border: 1px solid rgba(44, 44, 255, 0.44);
+	display: inline-block;
+}
+
+#gallery .item-3 {
+	width: 33.333%;
+	height: 100%;
+	box-sizing: border-box;
+	border: 1px solid rgba(44, 44, 255, 0.44);
+	display: inline-block;
+}
+
+
+#footer {
+	padding-top: 5%;
+	background-color: #2c2cff;
+	display: inline-block;
+	color: #ffffff;
+}
+
+#contact {
+	width: 45%;
+	float: left;
+	text-align: left;
+	padding-left: 5%;
+}
+
+#contact address {
+	padding: 3% 0;
+}
+
+#contact p {
+	padding: 1.5% 0;
+}
+
+#contact a {
+	text-decoration: none;
+	color: #ffffff;	
+}
+
+#media {
+	padding: 6% 0;
+}
+
+#media i a img {
+	padding: 2%;
+}
+
+#form {
+	width: 50%;
+	float: right;
+	text-align: left;
+	padding-top: 20px;
+}
+
+#form input, textarea {
+	width: 65%;
+	padding: 1% 0;
+	margin: 3px 0;
+	border: 1px solid #676767;
+	border-radius: 5px;
+	color: #ffffff;
+	background-color: #9a9797;
+}
+
+#form input:last-child {
+	width: 15%;
 	
 }
 
-label {
-	font-size: 1.3em;
-}
-.wrap-input input {
-	border: 2px solid #a09c9c;
-	border-radius: 3px;
+
 	
-}
-
-/*style miasto*/
-
-#miasta {
-	margin: 20px 0;
-	border-radius: 5px;
-	padding: 5px 43px;
-	background-color: #babef5;
-}
-
-/*płeć*/
-
-.man-woman {
-	margin: 20px 0;
-}
-
-
-.man-woman label {
-	font-size: 1.3em;
-}
-
-.man-woman label:nth-child(2n) {
-	margin-left: 20px;
-}
-
-
-.clause p {
-	font-style: italic;
-	font-size: 0.8em;
-	line-height: 1.5em;
-}
-
-.message {
-	margin-top: 35px;
-}
-
-.message textarea {
-	border: 2px solid rgba(44, 89, 141, 0.76);
-	border-radius: 5px;
-	margin-top: 3px;
-}
-
-#wyslij {
-	border: 1px solid rgb(190, 190, 190);
-	border-radius: 5px;
-	color: #03054d;
-	background-color: rgb(174, 184, 203);
-	padding: 5px;
 }
